@@ -6,9 +6,12 @@ const historial = document.getElementById("historial");
 const questionContainer = document.getElementById("questionContainer");
 const historialContainer = document.getElementById("historialContainer");
 
+
 asignar = () =>{
 
+    //para mostrar donde se debe guardar la informacion
     let referencia = database.ref('preguntas/vista').push();
+    //para crear el elemento
     let preguntaView = {
         id: referencia.key,
         pregunta: question.value,
@@ -17,12 +20,16 @@ asignar = () =>{
         
     }
 
+    //para que se suba a la base de datos
     referencia.set(preguntaView);
+    //para que el input se vacie 
     question.value = '';
 }
 
+//para que realice todas las funciones del metodo asignar cuando se presione el boton
 questionBtn.addEventListener('click', asignar);
 
+//para crear el render de al seccion preguntas
 database.ref('preguntas/vista').on('value', function(data){
     questionContainer.innerHTML = '';
     data.forEach(
@@ -36,6 +43,7 @@ database.ref('preguntas/vista').on('value', function(data){
     
 })
 
+//para crear el render de la seccion historial
 database.ref('preguntas/historial').on('value', function(data){
     historialContainer.innerHTML = '';
     data.forEach(
