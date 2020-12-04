@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title id="julimarketing">Julimarketing</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <h1 id="mainTitle">Julimarketing</h1>
+        <div id="part1">
+            <input id="question" type="text" placeholder="Escriba una pregunta">
+            <button id="questionBtn">Ok</button>
+        </div>
+
+        <div id="graphic">
+            <div id="questionView">
+                <div id="questionContainer"></div>
+            </div>
+
+        </div>
+
+        <h2 id="pastQuestion">Historial</h2>
+        <div id="graphic2">
+            <div id="historial">
+                <div id="historialContainer"></div>
+            </div>
+        </div>
+        
+    </body>
+</html>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyD1X2Khwn8iNIObtuKhLlU46Oul5XEG46U",
+    authDomain: "parcialecoapps.firebaseapp.com",
+    databaseURL: "https://parcialecoapps.firebaseio.com",
+    projectId: "parcialecoapps",
+    storageBucket: "parcialecoapps.appspot.com",
+    messagingSenderId: "882661218440",
+    appId: "1:882661218440:web:540bd6016f26a34ce4673d",
+    measurementId: "G-XP3ZPXN4WB"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="js/index.js"></script>
+<script src="components/parte1.js"></script>
